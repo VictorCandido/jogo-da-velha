@@ -142,7 +142,7 @@ export class JogoDaVelhaService {
     }
 
     // valida as diagonais
-    if(tabuleiro[0][0] === jogador && tabuleiro[1][1] === jogador && tabuleiro[2][2] === jogador && ) {
+    if(tabuleiro[0][0] === jogador && tabuleiro[1][1] === jogador && tabuleiro[2][2] === jogador) {
       fim = [[0, 0], [1, 1], [2, 2]];
     }
 
@@ -213,6 +213,7 @@ export class JogoDaVelhaService {
    * Retorna se a peça X deve ser exibida para a coordenada informada.
    * @param posX number
    * @param posY number
+   * @return boolean
    */
   exibirX(posX: number, posY: number): boolean {
     return this.tabuleiro[posX][posY] === this.X;
@@ -222,6 +223,7 @@ export class JogoDaVelhaService {
    * Retorna se a peça O deve ser exibida para a coordenada informada.
    * @param posX number
    * @param posY number
+   * @return boolean
    */
   exibirO(posX: number, posY: number): boolean {
     return this.tabuleiro[posX][posY] === this.O;
@@ -231,6 +233,7 @@ export class JogoDaVelhaService {
    * Retorna se a marcação de vitória deve ser exibida para a coordenada informada.
    * @param posX number
    * @param posY number
+   * @return boolean
    */
   exibirVitoria(posX: number, posY: number): boolean {
     let exibirVitoria: boolean = false;
@@ -250,6 +253,7 @@ export class JogoDaVelhaService {
 
   /**
    * Inicializa um novo jogo, assim como exibe o tabuleiro.
+   * @return void
    */
   novoJogo(): void {
     this.inicializar();
